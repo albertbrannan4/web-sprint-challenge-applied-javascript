@@ -44,7 +44,7 @@ const tabsAppender = (selector) => {
   const Selected = document.querySelector(selector)
   axios.get(`http://localhost:5001/api/topics`)
   .then(res=>{
-    // console.log(res.data.topics);
+
     const {topics} = res.data;
     Selected.appendChild(Tabs(topics))
   })
